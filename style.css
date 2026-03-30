@@ -1,0 +1,181 @@
+/* Базовые настройки */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: "Sansation", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: radial-gradient(circle at top, #ff6666 0%, #330000 55%, #140000 100%);
+    color: #ffecec;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px 16px;
+}
+
+/* Контейнер страницы */
+.container {
+    width: 100%;
+    max-width: 900px;
+    background: rgba(40, 0, 0, 0.9);
+    border-radius: 18px;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.7);
+    padding: 28px 26px 30px;
+    border: 1px solid rgba(255, 120, 120, 0.4);
+    backdrop-filter: blur(10px);
+}
+
+/* Заголовок */
+h1, h2, h3 {
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #ffb3b3;
+    text-shadow: 0 0 12px rgba(255, 80, 80, 0.7);
+    margin-bottom: 18px;
+}
+
+/* Текст */
+p {
+    line-height: 1.6;
+    margin-bottom: 12px;
+    color: #ffe0e0;
+}
+
+/* Поля ввода */
+input[type="text"],
+input[type="search"],
+textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 150, 150, 0.6);
+    background: rgba(20, 0, 0, 0.9);
+    color: #ffecec;
+    outline: none;
+    font-size: 14px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+    margin-bottom: 12px;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #ff9f9f;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #ff4d4d;
+    box-shadow: 0 0 0 2px rgba(255, 77, 77, 0.4);
+    background: rgba(30, 0, 0, 0.95);
+}
+
+/* Кнопки */
+button,
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 9px 18px;
+    border-radius: 999px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    background: linear-gradient(135deg, #ff4d4d, #b30000);
+    color: #fff5f5;
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.6);
+    transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.2s ease;
+}
+
+button:hover,
+.btn:hover {
+    background: linear-gradient(135deg, #ff6666, #cc0000);
+    transform: translateY(-1px);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.7);
+}
+
+button:active,
+.btn:active {
+    transform: translateY(1px) scale(0.98);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.7);
+}
+
+/* Список элементов (например, коллекция цитат) */
+.list {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.list-item {
+    padding: 10px 12px;
+    border-radius: 12px;
+    background: rgba(60, 0, 0, 0.9);
+    border: 1px solid rgba(255, 130, 130, 0.4);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #ffe6e6;
+}
+
+.list-item span {
+    font-size: 14px;
+}
+
+/* Маленькая кнопка внутри элемента */
+.list-item .icon-btn {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(255, 90, 90, 0.9);
+    color: #fff5f5;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.list-item .icon-btn:hover {
+    background: rgba(255, 120, 120, 1);
+    transform: translateY(-1px);
+}
+
+/* Хелп-текст / ошибки */
+.helper-text {
+    font-size: 12px;
+    color: #ffb3b3;
+    margin-top: 4px;
+}
+
+.error-text {
+    color: #ff4d4d;
+}
+
+/* Адаптивность */
+@media (max-width: 600px) {
+    body {
+        padding: 24px 10px;
+    }
+
+    .container {
+        padding: 20px 16px 22px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+}
