@@ -1,0 +1,110 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fff5f5;
+    margin: 0;
+    padding: 20px;
+    color: #2d3748;
+}
+
+#header {
+    background-color: white;
+    padding: 15px 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(229, 62, 62, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 20px;
+    z-index: 100;
+    margin-bottom: 30px;
+    border: 1px solid #fed7d7;
+}
+
+#header div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    color: #c53030;
+}
+
+#selectAll {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    accent-color: #e53e3e;
+}
+
+button {
+    background-color: #e53e3e;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 4px rgba(229, 62, 62, 0.2);
+}
+
+button:hover {
+    background-color: #c53030;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(229, 62, 62, 0.3);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+#conteiner {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 10px;
+}
+
+/* Стили для карточек изображений (обновлено под класс .imageDiv) */
+.imageDiv {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #fed7d7;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.imageDiv:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 20px rgba(229, 62, 62, 0.15);
+    border-color: #feb2b2;
+}
+
+.imageDiv img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain; /* Изменено с cover на contain, чтобы видеть всю картинку целиком */
+    display: block;
+    background-color: #f7fafc; /* Светлый фон для прозрачных картинок */
+    transition: transform 0.5s ease;
+}
+
+.imageDiv:hover img {
+    transform: scale(1.05);
+}
+
+/* Стили для чекбокса внутри карточки */
+.imageDiv input[type="checkbox"] {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    width: 22px;
+    height: 22px;
+    accent-color: #e53e3e;
+    cursor: pointer;
+    z-index: 10;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    border-radius: 4px;
+}
